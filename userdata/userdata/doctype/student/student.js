@@ -4,7 +4,7 @@ frappe.ui.form.on('Student', {
             frappe.call({
                 method: 'userdata.userdata.doctype.student.student.create_user_if_not_exists',
                 args: {
-                    name: frm.doc.first_name
+                    name: frm.doc.email_address
                 },
                 callback: function(response) {
                     if (response.message) {
