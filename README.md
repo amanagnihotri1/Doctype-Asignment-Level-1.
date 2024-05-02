@@ -39,10 +39,16 @@ Before running this project, ensure you have the following installed:
 
 
 ## Installation
-1. Setup Frappe framework before,to setup <a href="https://wiki.nestorbird.com/wiki/install-frappe-v15">Visit link</a>
-2. Navigate to **Customization > DocType**
-3. Create a new DocType named "Student".
-4. Add the specified fields according to the provided instructions.
+1. Install Docker desktop and open command prompt.
+2. Inside command promt type this command
+   ```bash
+   docker pull ubuntu:22.04
+   docker run -dt --name bench -p 8000:8000 ubuntu:22.04 /bin/bash
+   ```
+4. Next setup frappe framework, to setup <a href="https://wiki.nestorbird.com/wiki/install-frappe-v15">Click here</a>
+5. Navigate to **Customization > DocType**
+6. Create a new DocType named "Student".
+7. Add the specified fields according to the provided instructions.
 ## Usage
 1. Access the "Student" module from the main menu.
 2. Create new student records by filling in the required fields.
