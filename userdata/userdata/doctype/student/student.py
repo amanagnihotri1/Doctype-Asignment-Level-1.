@@ -2,11 +2,11 @@ import frappe
 from frappe.model.document import Document
 import datetime
 @frappe.whitelist()
-def create_user_if_not_exists(email):
+def create_user_if_not_exists(name):
 
-    if not frappe.db.exists("User", email):
+    if not frappe.db.exists("User", name):
         # Fetch student details
-        student = frappe.get_doc("Student", email_address)
+        student = frappe.get_doc("Student",name)
         
         # Create a new user document
         new_user = frappe.new_doc("User")
