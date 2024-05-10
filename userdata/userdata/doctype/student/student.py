@@ -33,6 +33,7 @@ class Student(Document):
         birth_date = datetime.datetime.strptime(self.date_of_birth, '%Y-%m-%d')
         if birth_date >= datetime.datetime.now():
             frappe.throw("Date of birth cannot be greater than the current date")  
-    
+        if not "@gmail.com" in self.email:
+            frappe.throw("Enter Valid email address")
     def before_save(self):
         self.full_name = self.get_full_name()
